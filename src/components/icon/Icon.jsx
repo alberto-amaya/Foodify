@@ -4,7 +4,7 @@ import "external-svg-loader";
 
 const path = process.env.PUBLIC_URL.concat("/assets/icons/");
 
- const Icon = ({name, alt}) => {
+ const Icon = ({name}) => {
     return (
         <div className="icon">
             
