@@ -1,5 +1,10 @@
 @import-normalize;
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --bg-secundary: #ff9800;
   --bg-primary: #fafafa;
