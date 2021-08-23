@@ -6,6 +6,10 @@
 }
 
 :root {
-  --bg-secundary: #ff9800;
+  --bg-secundary: #ffc43a;
   --bg-primary: #fafafa;
+}
+
+body {
+  background: var(--bg-primary);
 }
