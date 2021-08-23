@@ -4,7 +4,7 @@ import "external-svg-loader";
 
 const path = process.env.PUBLIC_URL.concat("/assets/icons/");
 
- const Icon = ({name}) => {
+ const Icon = ({name, active}) => {
     return (
         <div className="icon">
             
@@ -14,7 +14,7 @@ const path = process.env.PUBLIC_URL.concat("/assets/icons/");
         width="2.3em"
         height="2.3em"
         style={{
-          color: "var(--bg-secundary)"
+          color: active ? "var(--bg-secundary)":"#666"
         }}
         >
         </svg>
