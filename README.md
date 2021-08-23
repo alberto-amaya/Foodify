@@ -4,8 +4,11 @@ Hello there. Food app is a proyect I did with my friend [Luis](https://github.co
 
 # About the proyect
 
-Food app is a web aplication to search recipes about food.  \n
+Food app is a web aplication to search recipes about food.
 To make the project we use React JS.
 
-API - https://spoonacular.com/food-api \n
-Proyect - [...]
+API - https://spoonacular.com/food-api
+Proyect - https://angel-arceo.github.io/Food-App/
+
+
+The project is still in development
