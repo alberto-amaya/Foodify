@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import BottomNav from '../components/bottomNav/BottomNav';
 
 import Search from '../components/Search';
 
@@ -8,6 +9,8 @@ const Home = () => {
             <header>
                 <Search />
             </header>
+            
+            <BottomNav></BottomNav>
         </Fragment>
     );
 }
