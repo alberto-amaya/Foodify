@@ -1,0 +1,17 @@
+.bottomnav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  box-shadow: -3px 0 10px rgb(0 0 0 / 20%);
+}
+
+.bottomnav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottomnav > ul > li {
+  list-style: none;
+}
