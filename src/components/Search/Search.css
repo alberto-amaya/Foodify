@@ -29,7 +29,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 37px;
     border-radius: 0 15px 15px 0;
     background-color: var(--bgColor);
-    padding-right: 10px;
 }
