@@ -23,8 +23,8 @@ const path = process.env.PUBLIC_URL.concat("/assets/icons/");
 
 
 Icon.defaultProps={
-    width:"2.3em",
-    height:"2.3em",
+    width:"1.6em",
+    height:"1.6em",
     color:"#666"
 }
 
