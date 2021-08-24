@@ -4,17 +4,17 @@ import "external-svg-loader";
 
 const path = process.env.PUBLIC_URL.concat("/assets/icons/");
 
- const Icon = ({name, active}) => {
+ const Icon = ({name,width,height,color}) => {
     return (
         <div className="icon">
             
         <svg
         data-src={`${path}${name}.svg`}
         fill="currentColor"
-        width="2.3em"
-        height="2.3em"
+        width={width}
+        height={height}
         style={{
-          color: active ? "var(--bg-secundary)":"#666"
+          color
         }}
         >
         </svg>
@@ -22,5 +22,11 @@ const path = process.env.PUBLIC_URL.concat("/assets/icons/");
     )
 };
 
+
+Icon.defaultProps={
+    width:"2.3em",
+    height:"2.3em",
+    color:"#666"
+}
 
 export default Icon;
