@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
-import BottomNav from '../components/bottomNav/BottomNav';
+import BottomNav from '../../components/bottomNav/BottomNav';
 
 import './Home.css';
-import Search from '../components/Search';
+import Search from '../../components/Search/Search';
 
 const Home = () => {
     const onSearch = (query) => {

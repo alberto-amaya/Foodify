@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../icon/Icon.jsx';
+import Icon from '../iconComponent/Icon.jsx';
 import "./BottomNav.css";
 
 

@@ -1,6 +1,6 @@
 import React, { Fragment, useRef } from 'react';
 import './Search.css';
-import SearchIcon from '../assets/icons/Search.svg';
+import Icon from '../iconComponent/Icon.jsx';
 
 const Search = (props) => {
     const inputSearch = useRef(null);
@@ -12,7 +12,7 @@ const Search = (props) => {
         <Fragment>
             <input type="text" placeholder="Search" onChange={handleClick} ref={inputSearch} />
             <button>
-                <img src={SearchIcon} alt="SearchIcon" />
+                <Icon name="Search" alt="SearchIcon" color="#929298"/>
             </button>
         </Fragment>
     );
