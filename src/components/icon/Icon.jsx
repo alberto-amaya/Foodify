@@ -7,17 +7,16 @@ const path = process.env.PUBLIC_URL.concat("/assets/icons/");
  const Icon = ({name,width,height,color}) => {
     return (
         <div className="icon">
-            
-        <svg
-        data-src={`${path}${name}.svg`}
-        fill="currentColor"
-        width={width}
-        height={height}
-        style={{
-          color
-        }}
-        >
-        </svg>
+            <svg
+            data-src={`${path}${name}.svg`}
+            fill="currentColor"
+            width={width}
+            height={height}
+            style={{
+               color
+            }}
+            >
+            </svg>
         </div>
     )
 };

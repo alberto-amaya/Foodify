@@ -9,7 +9,7 @@ export default function BottomNav() {
         <nav className="bottomnav" >
             <ul>
                 <li>
-                    <Icon name="home" alt="home" active={true}/>
+                    <Icon name="home" alt="home" color="var(--bg-secundary)"/>
                 </li>
             
                 <li>
