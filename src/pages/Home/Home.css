@@ -17,5 +17,9 @@ main {
 }
 
 main .main-trend {
-    margin-left: 30px;
+    margin-left: 20px;
+}
+
+main .main-hot-recipes {
+    margin-left: 20px;
 }
