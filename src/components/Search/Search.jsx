@@ -7,6 +7,7 @@ const Search = (props) => {
 
     const handleClick = () => {
         props.onSearch(inputSearch.current.value);
+        
     }
     const bgStyle={
         backgroundImage: `url(${process.env.PUBLIC_URL}/assets/icons/search.svg)`,
