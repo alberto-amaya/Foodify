@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.Food-Card {
+    position: relative;
+    margin-right: 20px;
+}
+
+.Food-Card .Food-Card--img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.Food-Card .Food-Card--title {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 200px;
+    height: 60px;
+    padding: 17px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(50, 50, 50, 0.1);
+}
+
+.Food-Card .Food-Card--title h2 {
+    font-family: 'Poppins', sans-serif; 
+    color: #282828;
+    font-size: 18px;
+    font-weight: 500;
+}

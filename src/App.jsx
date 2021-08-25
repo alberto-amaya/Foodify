@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { API_KEY } from './const';
 import useFetch from './hooks/useFetch';
 import Home from './pages/Home/Home';
+import Recipe from './pages/Recipe/Recipe';
 
 const App = () => {
  // const {data} = useFetch(`https://api.spoonacular.com/recipes/716429/information?apiKey=${API_KEY}&includeNutrition=true`);
@@ -13,7 +14,8 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
+        <Route  path="/recipe" component={Recipe} />
       </Switch>
     </Router>
   );

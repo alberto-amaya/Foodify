@@ -11,3 +11,15 @@ header .header-search {
   justify-content: center;
   top: 37px;
 }
+
+main {
+  margin-top: 25px;
+}
+
+main .main-trend {
+  margin-left: 20px;
+}
+
+main .main-hot-recipes {
+  margin-left: 20px;
+}
