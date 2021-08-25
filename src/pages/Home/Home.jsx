@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
-import BottomNav from '../../components/bottomNav/BottomNav';
-
 import './Home.css';
+
 import Search from '../../components/Search/Search';
+import Trend from '../../components/trendComponent/Trend';
+import BottomNav from '../../components/bottomNav/BottomNav';
 
 const Home = () => {
     const onSearch = (query) => {
@@ -15,7 +16,11 @@ const Home = () => {
                     <Search onSearch={onSearch} />
                 </div>
             </header>
-            
+            <main>
+                <div className="main-trend">
+                    <Trend />
+                </div>
+            </main>
             <BottomNav></BottomNav>
         </Fragment>
     )

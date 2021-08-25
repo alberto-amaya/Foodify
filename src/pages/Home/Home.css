@@ -11,3 +11,11 @@ header .header-search {
     justify-content: center;
     top: 37px;
 }
+
+main {
+    margin-top: 25px;
+}
+
+main .main-trend {
+    margin-left: 30px;
+}

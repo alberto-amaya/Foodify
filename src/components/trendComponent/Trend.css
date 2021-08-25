@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --font: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-family: var(--font); 
+    color: #282828;
+    font-size: 21px;
+}
+
+.main-trend--trending-foods {
+    position: relative;
+    display: flex;
+    width: 330px;
+    height: 230px;
+    background-color: inherit;
+    overflow: hidden;
+    overflow: auto;
+}
