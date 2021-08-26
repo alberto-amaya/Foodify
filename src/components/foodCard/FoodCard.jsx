@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import './FoodCard.css';
+import { Link } from 'react-router-dom';
 
 const FoodCard = ({data}) => {
     const { title, image } = data;

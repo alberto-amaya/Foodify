@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --font: 'Poppins', sans-serif;
+}
+
+.Link {
+    text-decoration: none;
+}
+
+.Recipe-Card {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.Recipe-Card .Recipe-Card--recipeImage img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.Recipe-Card .Recipe-Card--recipeContent h2 {
+    font-family: var(--font);
+    color: #282828;
+    font-size: 16px;
+    margin-top: 7px;
+    margin-bottom: 8px;
+}
+
+.Recipe-Card .Recipe-Card--recipeContent p {
+    font-family: var(--font);
+    color: #808080;
+    font-size: 15px;
+}
