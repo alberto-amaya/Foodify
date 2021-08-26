@@ -10,7 +10,6 @@ const Trend = () => {
     
     const [cards, setCards]=useState([]);
 
-    console.log(data,isPending)
     useEffect(()=>{
         if(!isPending){
             const cards = data.recipes.map(data=>{
