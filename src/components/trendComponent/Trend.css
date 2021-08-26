@@ -19,3 +19,7 @@ h1 {
     overflow: hidden;
     overflow: auto;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
