@@ -2,7 +2,7 @@
   "name": "food-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Angel-Arceo.github.io/",
+  "homepage": "http://Angel-Arceo.github.io/Food-App",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
