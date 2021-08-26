@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function useFetch(url) {
     const [data, setData] = useState(null);
-    const [isPending, setIsPending] = useState(false);
+    const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -18,8 +18,8 @@ export default function useFetch(url) {
                 }
                 const data = await res.json();
 
-                setIsPending(false);
                 setData(data);
+                setIsPending(false);
                 setError({ err: false })
             } catch (e) {
                 setError(e);
