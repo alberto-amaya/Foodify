@@ -6,13 +6,13 @@ import {API_KEY} from "../../const";
 import uniqueID from '../../helpers/uniqueID';
 
 const Trend = () => {
-    const {data,isPending}= useFetch(`https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=1&tags=vegetarian,dessert`);
+    const { data, isPending } = useFetch(`https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=5&tags=vegetarian,dessert`);
     
-    const [cards, setCards]=useState([]);
+    const [ cards , setCards ] = useState([]);
 
     useEffect(()=>{
         if(!isPending){
-            const cards = data.recipes.map(data=>{
+            const cards = data.recipes.map(data => {
                 return <FoodCard key={uniqueID} data={data} />
             });
             setCards(cards);

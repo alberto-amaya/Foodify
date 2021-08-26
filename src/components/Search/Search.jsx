@@ -1,5 +1,4 @@
 import React, { Fragment, useRef } from 'react';
-import Icon from '../iconComponent/Icon';
 import './Search.css';
 
 const Search = (props) => {
