@@ -54,7 +54,7 @@ export class FetchError extends Error {
 
         // Maintains proper stack trace for where our error was thrown (only available on V8)
         if (Error.captureStackTrace) {
-            Error.captureStackTrace(this, CustomError);
+            Error.captureStackTrace(this, FetchError);
         }
 
         this.#status = status;
@@ -88,7 +88,7 @@ export class FetchError extends Error {
           const descriptor = Object.getOwnPropertyDescriptor(proto, key);
           const hasGetter = descriptor && typeof descriptor.get === 'function';
           if (hasGetter) {
-              jsonObj[key] = desc.get();
+              jsonObj[key] = descriptor.get();
           }
        }
 
