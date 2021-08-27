@@ -1,11 +1,11 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import FoodCard from '../foodCard/FoodCard';
-import './Trend.css';
+import './RandomRecipes.css';
 import useFetch from "../../hooks/useFetch";
 import {API_KEY} from "../../const";
 import uniqueID from '../../helpers/uniqueID';
 
-const Trend = () => {
+const RandomRecipes = () => {
     const { data, isPending } = useFetch(`https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=5&tags=vegetarian,dessert`);
     
     const [ cards , setCards ] = useState([]);
@@ -21,7 +21,7 @@ const Trend = () => {
 
     return (
         <Fragment>
-            <h1>Trends</h1>
+            <h1>Random</h1>
             <div className="main-trend--trending-foods">
                 {cards}
             </div>
@@ -29,4 +29,4 @@ const Trend = () => {
     );
 }
 
-export default Trend;
+export default RandomRecipes;
