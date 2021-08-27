@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './RecipeCard.css';
 
+import useSummary from "../../hooks/useSummary";
 import { Link } from 'react-router-dom';
 
 const RecipeCard = (props) => {
