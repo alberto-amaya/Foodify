@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './RecipeCard.css';
 
 import useSummary from "../../hooks/useSummary";
 import { Link } from 'react-router-dom';
 
 const RecipeCard = (props) => {
-    const [ summary, setSummary ] = useState(props.summary); 
-
-    useEffect(() => setSummary(summary.replace(/(&nbsp;|<([^>]+)>)/ig, "")) , [summary]);
+    const summary = useSummary(props.id);
 
     return (
         <Link to='/recipe' className="Link">
