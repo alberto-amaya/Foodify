@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import './Recipe.css';
+
+import RecipeHeader from '../../components/recipeHeader/RecipeHeader';
 
 const Recipe = () => {
     return (
-        <div>
-            Hello World :D
-        </div>
+        <Fragment>
+            <header>
+                <RecipeHeader />
+            </header>
+            <main>
+
+            </main>
+        </Fragment>
     );
 }
 
