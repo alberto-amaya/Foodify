@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Food app</title>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="theme-color" content="#ffc43a" />
     <meta
       name="description"
@@ -27,7 +29,20 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Food app</title>
+    <link rel="canonical" href="%PUBLIC_URL%/" />
+    <link rel="home" href="%PUBLIC_URL%/" />
+    <!--
+      Speed up third-party resources load
+    -->
+    <link rel="preconnect dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="preconnect dns-prefetch" href="https://spoonacular.com" />
+    <link rel="preconnect dns-prefetch" href="https://api.spoonacular.com" />
+    <!-- CDN for images: ingredients, cooking equipment... -->
+    <link rel="preconnect dns-prefetch" href="https://spoonacular.com/cdn" />
+    <link rel="preconnect dns-prefetch" href="https://spoonacular.com/recipeImages" />
+    <link rel="preconnect dns-prefetch" href="https://spoonacular.com/productImages" />
+    <link rel="preconnect dns-prefetch" href="https://spoonacular.com/file/wximages" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
