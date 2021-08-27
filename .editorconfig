@@ -1,0 +1,56 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Global
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[{.gitmodules,Makefile,Dockerfile}]
+indent_style = tab
+indent_size = 4
+
+[**.{md,markdown}]
+indent_size = 4
+trim_trailing_whitespace = false
+
+eclint_indent_style = unset
+
+# Config files with 2 spaces
+[{package.json,.travis.yml,**.yml,**.yaml}]
+indent_style = space
+indent_size = 2
+
+[**.json]
+indent_style = space
+indent_size = 2
+
+[**.{js,jsx}]
+indent_style = space
+indent_size = 4
+
+[**.{css,scss,less,sass}]
+indent_style = space
+indent_size = 4
+
+[**.svg]
+indent_style = tab
+indent_size = 4
+
+[{go.mod,go.sum,*.go}]
+indent_style = tab
+indent_size = 4
+
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.sql]
+indent_style = space
+indent_size = 2
