@@ -4,23 +4,23 @@
     --font: 'Poppins', sans-serif;
 }
 
-.main-hot-recipes--header {
+.main-similar-recipes--header {
     display: flex;
     justify-content: space-between;
 }
 
-.main-hot-recipes--header h1 {
+.main-similar-recipes--header h1 {
     font-family: var(--font);
     color: #282828;
     font-size: 21px;
 }
 
-.main-hot-recipes--header .link {
+.main-similar-recipes--header .link {
     display: flex;
     text-decoration: none;
 }
 
-.main-hot-recipes--header .link p {
+.main-similar-recipes--header .link p {
     font-family: var(--font);
     color: #ffc33c;
     font-size: 17px;
@@ -28,6 +28,6 @@
     margin-right: -30px;
 }
 
-.main-hot-recipes--header .link .icon {
+.main-similar-recipes--header .link .icon {
     margin-top: -2px;
 }

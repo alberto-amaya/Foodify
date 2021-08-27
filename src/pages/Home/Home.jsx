@@ -4,7 +4,7 @@ import './Home.css';
 import Search from '../../components/Search/Search';
 import RandomRecipes from '../../components/randomRecipes/RandomRecipes';
 import BottomNav from '../../components/bottomNav/BottomNav';
-import HotRecipes from '../../components/hotRecipesComponent/HotRecipes';
+import SimilarRecipes from '../../components/similarRecipes/SimilarRecipes';
 
 const Home = () => {
     const onSearch = (query) => {
@@ -18,11 +18,11 @@ const Home = () => {
                 </div>
             </header>
             <main>
-                <article className="main-trend">
+                <article className="main-random">
                     <RandomRecipes />
                 </article>
-                <article className="main-hot-recipes">
-                    <HotRecipes />
+                <article className="main-similar">
+                    <SimilarRecipes />
                 </article>
             </main>
             <BottomNav></BottomNav>
