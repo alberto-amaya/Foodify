@@ -13,7 +13,7 @@ const Trend = () => {
     useEffect(()=>{
         if(!isPending){
             const cards = data.recipes.map(data => {
-                return <FoodCard key={uniqueID} data={data} />
+                return <FoodCard key={uniqueID()} data={data} />
             });
             setCards(cards);
         }
