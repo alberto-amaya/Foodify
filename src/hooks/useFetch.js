@@ -14,7 +14,9 @@ export default function useFetch(url) {
                     throw new FetchError({
                         //err: true, //promoted as getter
                         status: res.status,
-                        statusText: res.statusText ? res.statusText : "An error has ocurred",
+                        statusText: res.statusText
+                            ? res.statusText
+                            : "An error has ocurred",
                     });
                 }
                 const data = await res.json();
@@ -47,7 +49,7 @@ export class FetchError extends Error {
     #status;
     #statusText;
 
-    constructor({status, statusText}, ...params) {
+    constructor({ status, statusText }, ...params) {
         // provide toString() message and
         // pass remaining arguments (including vendor specific ones) to parent constructor
         super(`E${status}: ${statusText}`, ...params);
@@ -77,22 +79,23 @@ export class FetchError extends Error {
      * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#tojson_behavior
      */
     toJSON(/*key*/) {
-      // start with an empty object
-      const jsonObj = {};
-// or emit all properties and all fields
-//      const jsonObj = Object.assign({}, this);
+        // start with an empty object
+        const jsonObj = {};
+        // or emit all properties and all fields
+        //        const jsonObj = Object.assign({}, this);
 
-      // add all getter properties
-      const proto = Object.getPrototypeOf(this);
-      for (const key of Object.getOwnPropertyNames(proto)) {      
-          const descriptor = Object.getOwnPropertyDescriptor(proto, key);
-          const hasGetter = descriptor && typeof descriptor.get === 'function';
-          if (hasGetter) {
-              jsonObj[key] = descriptor.get();
-          }
-       }
+        // add all getter properties
+        const proto = Object.getPrototypeOf(this);
+        for (const key of Object.getOwnPropertyNames(proto)) {
+            const descriptor = Object.getOwnPropertyDescriptor(proto, key);
+            const hasGetter =
+                descriptor && typeof descriptor.get === "function";
+            if (hasGetter) {
+                jsonObj[key] = descriptor.get();
+            }
+        }
 
-       return jsonObj;
+        return jsonObj;
     }
 
     /**
@@ -100,7 +103,7 @@ export class FetchError extends Error {
      * @return bool
      */
     get error() {
-       return true;
+        return true;
     }
 
     /**
@@ -118,5 +121,4 @@ export class FetchError extends Error {
     get statusText() {
         return this.#statusText;
     }
-
 }
