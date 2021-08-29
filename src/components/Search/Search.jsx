@@ -10,7 +10,6 @@ const Search = (props) => {
     }
     const bgStyle={
         backgroundImage: `url(${process.env.PUBLIC_URL}/assets/icons/search.svg)`,
-        
     }
     return (
         <Fragment>
