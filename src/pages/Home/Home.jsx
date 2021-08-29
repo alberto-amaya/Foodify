@@ -22,7 +22,7 @@ const Home = () => {
                     <RandomRecipes />
                 </article>
                 <article className="main-similar">
-                    <SimilarRecipes />
+                    <SimilarRecipes id="209128" />
                 </article>
             </main>
             <BottomNav></BottomNav>

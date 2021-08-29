@@ -1,11 +1,27 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import './SimilarRecipes.css';
+
+import useFetch from "../../hooks/useFetch";
+import {API_KEY} from "../../const";
+import uniqueID from '../../helpers/uniqueID';
 
 import { Link } from 'react-router-dom';
 import Icon from '../iconComponent/Icon';
 import RecipeCard from '../recipeCard/RecipeCard';
 
-const SimilarRecipes = () => {
+const SimilarRecipes = (props) => {
+    const { data, isPending } = useFetch(`https://api.spoonacular.com/recipes/${props.id}/similar?apiKey=${API_KEY}&number=4`); 
+    const [ recipeCards, setRecipeCards ] = useState([]);
+
+    useEffect(() => {
+        if(!isPending){
+            const recipeCards = data.map(data => {
+                return <RecipeCard key={uniqueID()} id={data.id} title={data.title} />
+            });
+            setRecipeCards(recipeCards);
+        }
+    }, [isPending, data]);
+
     return (
         <Fragment>
             <div className="main-similar-recipes--header">
@@ -15,7 +31,7 @@ const SimilarRecipes = () => {
                 </Link>
             </div>
             <div className="main-similar-recipes--recipes">
-                <RecipeCard id="716429" img="https://spoonacular.com/recipeImages/716429-312x231.jpg" title="Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs" />
+                {recipeCards}
             </div>
         </Fragment>
     );
