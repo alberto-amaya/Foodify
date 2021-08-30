@@ -13,6 +13,7 @@ const Search = (props) => {
         <Fragment>
             <button onClick={handleClick}>
                <Icon name="search" fill="transparent" stroke="#fff"></Icon>
+
             </button>
             <input type="text" placeholder="Search" ref={inputSearch} />
         </Fragment>

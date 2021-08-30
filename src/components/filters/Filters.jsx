@@ -1,15 +1,26 @@
-import React, { useRef } from 'react'
+import React, { useState, Fragment, useRef } from 'react';
 import './Filters.css';
 import Icon from "../iconComponent/Icon";
-
+import Modal from '../modal/Modal';
 
 const Filters = () => {
-    const filterButton = useRef(null);
+    const [ active, setActive ] = useState(false);
+    const filterButton = useRef();
+
+    const toggle = () => {
+        setActive(!active);
+    }
 
     return (
-        <button className="filters" ref={filterButton}>
-            <Icon name="filter" ></Icon>
-        </button>
+        <Fragment>
+            <button className="filters" ref={filterButton}>
+                <Icon name="filter" ></Icon>
+            </button>
+
+            <Modal active={active} toggle={toggle}>
+                <h1>Hello World</h1>
+            </Modal>
+        </Fragment>
     )
 }
 

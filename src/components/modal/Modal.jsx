@@ -1,23 +1,24 @@
 import React from 'react';
 import Portal from '../portal/Portal';
 
-const Modal = (props) => {
-    const { children, toggle, active } = props;
+class Modal extends React.Component {
+    render() {
+        const { children, toggle, active } = this.props;
 
-    return (
-        <Portal>
-            {active && (
-                <div style={styles.wrapper}>
-                    <div style={styles.window}>
-                        <button style={styles.closeBtn}>X</button>
+        return (
+            <Portal>
+                {active && (
+                    <div style={styles.wrapper}>
+                        <div style={styles.window}>
+                            <button style={styles.closeBtn} onClick={toggle}>X</button>
+                            <div>{children}</div>
+                        </div>
                     </div>
-                    <div>{children}</div>
-                </div>
-            )}
-        </Portal>
-    );
+                )}
+            </Portal>
+        )
+    }
 }
-
 const styles = {
     wrapper: {
         position: 'absolute',
