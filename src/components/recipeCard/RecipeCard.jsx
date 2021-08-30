@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './RecipeCard.css';
 
-import useSummary from "../../hooks/useSummary";
 import useFetch from "../../hooks/useFetch";
 import {API_KEY} from "../../const";
 
 import { Link } from 'react-router-dom';
 
 const RecipeCard = (props) => {
-    const summary = useSummary(props.id);
     const [ img, setImg ] = useState('');
+    const [ summary, setSummary ] = useState('');
     const { data, isPending } = useFetch(`https://api.spoonacular.com/recipes/${props.id}/information?apiKey=${API_KEY}`);
 
-    useEffect(() => !isPending ? setImg(data.image) : setImg('https://spoonacular.com/recipeImages/716429-556x370.jpg'), [isPending,data]);
+    useEffect(() => { 
+        !isPending ? setImg(data.image) : setImg('https://spoonacular.com/recipeImages/716429-556x370.jpg')
+        
+        !isPending ? setSummary(data.summary.replace(/(&nbsp;|<([^>]+)>)/ig, "")) : setSummary('No summary')
+    }, [isPending, data] );
 
     return (
         <Link to='/recipe' className="Link">
