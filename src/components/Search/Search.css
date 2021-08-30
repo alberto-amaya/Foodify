@@ -15,15 +15,15 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55px;
+  width: 50px;
   height: 2.6em;
   background-color: #ffc33c;
   border-radius:  10px 0 0 10px;
 }
 
 input {
-  width: 160px;
-  height: 1em;
+  width: 145px;
+  height: 1.1em;
   padding: 0.6em 2.6em 0.6em 1em;
   background-color: var(--bgColor);
   font-family: "Poppins", sans-serif;
