@@ -12,6 +12,7 @@ button {
 }
 
 button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +20,10 @@ button {
   height: 2.6em;
   background-color: #ffc33c;
   border-radius:  10px 0 0 10px;
+}
+
+.icon {
+  margin-top: 2.4px;
 }
 
 input {

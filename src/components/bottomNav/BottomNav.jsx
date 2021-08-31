@@ -9,18 +9,18 @@ export default function BottomNav() {
         <nav className="bottomnav" >
             <ul>
                 <li>
-                    <Icon name="home" alt="home" color="var(--bg-secundary)"/>
+                    <Icon name="home"   fill="var(--bg-secundary)"/>
                 </li>
             
                 <li>
-                     <Icon name="cutlery" alt="find recipes"/>
+                     <Icon name="cutlery"  fill="#666"/>
                 </li>
 
                 <li>
-                     <Icon name="user" alt="account"/>
+                     <Icon name="user"  fill="#666"/>
                 </li>
                 <li>
-                     <Icon name="recipes" alt="my recipes"/>
+                     <Icon name="recipes"  fill="#666"/>
                 </li>
             </ul>
         </nav>

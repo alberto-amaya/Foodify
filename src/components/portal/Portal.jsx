@@ -1,21 +1,27 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 const portalRoot = document.querySelector('#portal');
 
-const Portal = (props) => {
-    const el = document.createElement('div');
+class Portal extends React.Component {
+    constructor() {
+        super();
+        this.el = document.createElement('div');
+    }
 
-    useEffect(() => {
-        portalRoot.appendChild(el);
-        return () => {
-            portalRoot.removeChild(el);
-        };
-    }, []);
+    componentDidMount = () => {
+        portalRoot.appendChild(this.el);
+    }
+    
+    componentWillUnmount = () => {
+        portalRoot.removeChild(this.el);
+    }
 
-    return (
-        ReactDOM.createPortal(props.children, el)
-    );
+    render() {
+        const { children } = this.props;
+        
+        return ReactDOM.createPortal(children, this.el);
+    }
 }
 
 export default Portal;
