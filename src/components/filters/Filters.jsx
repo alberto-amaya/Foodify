@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useRef } from 'react';
+import React, { useState, Fragment } from 'react';
 import './Filters.css';
 import Icon from "../iconComponent/Icon";
 import Modal from '../modal/Modal';
