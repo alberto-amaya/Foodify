@@ -16,8 +16,8 @@ const Filters = () => {
                 <Icon name="filter" width="25" height="25" fill="transparent" stroke="#fff"></Icon>
             </button>
 
-            <Modal active={active} toggle={toggle}>
-                <h1>Hello World</h1>
+            <Modal active={active} toggle={toggle} title="Filters" height="330">
+                <p>This is a filter</p>
             </Modal>
         </Fragment>
     )
