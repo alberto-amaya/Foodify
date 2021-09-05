@@ -5,21 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Foodify</title>
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!--
+      About Apple iOS / Safari icons and UI customization
+      See  https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
+      See  https://mathiasbynens.be/notes/touch-icons
+    -->
+    <link rel="mask-icon" href="%PUBLIC_URL%/assets/favicons/safari-pinned-tab.svg" color="#710700" />
+    <meta name="apple-mobile-web-app-title" content="Foodify. Your tasty recipes app" />
+    <!-- For non-Retina (@1× display) iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-57x57-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-60x60-precomposed.png" />
+    <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6: -->
+    <link rel="apple-touch-icon" sizes="72x72" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-72x72-precomposed.png" />
+    <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7: -->
+    <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-76x76-precomposed.png" />
+    <!-- For iPhone with @2× display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon" sizes="114x114" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-114x114-precomposed.png" />
+    <!-- For iPhone with @2× display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon" sizes="120x120" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-120x120-precomposed.png" />
+    <!-- For iPad with @2× display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon" sizes="144x144" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-144x144-precomposed.png" />
+    <!-- For iPad with @2× display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon" sizes="152x152" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-152x152-precomposed.png" />
+    <!-- For iPhone 6 Plus with @3× display: -->
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-180x180.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="%PUBLIC_URL%/assets/favicons/apple-touch-icon-180x180-precomposed.png" />
+    <!-- For Chrome for Android: -->
+    <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/assets/favicons/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="application-name" content="Foodify. Your tasty recipes app" />
     <meta name="theme-color" content="#ffc43a" />
     <meta
       name="description"
-      content="We love eat! Food app is a web aplication to search recipes about food"
+      content="We love eat! Foodify is a web application where bookmark fresh tasty food recipes"
     />
     <meta
       name="keywords"
-      content="food,app,search,recipes,cook,eat,enjoy,kitchen"
+      content="foodify,food,app,search,book,recipes,cook,cooking,eat,fresh,tasty,enjoy,fork,heart,health,healthy,kitchen"
     />
     <!--
       manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+      user's mobile device or desktop.
+
+      See https://developers.google.com/web/fundamentals/web-app-manifest/
+
+      The src url of files defined inside it points relative to itself.
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      browserconfig.xml provides metadata used when your web app is installed on a
+      user's mobile device or desktop with Metro UI Toolkit (Microsoft Windows 8+ / IE11+)
+
+      See http://msdn.microsoft.com/en-us/library/ie/dn320426(v=vs.85).aspx
+
+      The src url of files defined inside it points relative to itself
+    -->
+    <meta name="msapplication-TileColor" content="#ffc43a" />
+    <meta name="msapplication-TileImage" content="%PUBLIC_URL%/assets/favicons/mstile-144x144.png" />
+    <meta name="msapplication-config" content="%PUBLIC_URL%/browserconfig.xml" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
