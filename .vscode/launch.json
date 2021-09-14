@@ -2,14 +2,101 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Chrome",
-      "type": "chrome",
+      "name": "Chrome at localhost",
+      "type": "pwa-chrome",
       "request": "launch",
       "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}/src",
+      "webRoot": "${workspaceFolder}${pathSeparator}src",
       "sourceMapPathOverrides": {
-        "webpack:///src/*": "${webRoot}/*"
+        "webpack:///src/*": "${webRoot}${pathSeparator}*"
       }
+      //"preLaunchTask": "npm: build"
+      //"preLaunchTask": "npm: serve"
+    },
+
+    //
+    // CRA advanced debug with VSCode
+    // https://create-react-app.dev/docs/debugging-tests
+    //
+    {
+      "name": "Debug tests CRA Single Run",
+      "type": "node",
+      "request": "launch",
+      "env": { "CI": "true" },
+      "runtimeExecutable": "${workspaceFolder}${pathSeparator}node_modules${pathSeparator}.bin${pathSeparator}react-scripts",
+      "args": ["test", "--runInBand", "--no-cache"],
+      "cwd": "${workspaceFolder}",
+      "protocol": "inspector",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true
+    },
+    {
+      "name": "Debug tests CRA watch mode",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}${pathSeparator}node_modules${pathSeparator}.bin${pathSeparator}react-scripts",
+      "args": ["test", "--runInBand", "--no-cache", "--watchAll"],
+      "cwd": "${workspaceFolder}",
+      "protocol": "inspector",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Debug tests CRA opened file",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}${pathSeparator}node_modules${pathSeparator}.bin${pathSeparator}react-scripts",
+      "args": [
+        "test",
+        "${fileBasenameNoExtension}",
+        "--runInBand",
+        "--no-cache",
+        "--watchAll"
+      ],
+      "cwd": "${workspaceFolder}",
+      "protocol": "inspector",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+
+    //
+    // Jest advanced debug with VSCode
+    // https://code.visualstudio.com/docs/nodejs/nodejs-debugging
+    // https://jestjs.io/docs/troubleshooting
+    //
+    {
+      "name": "Jest single run all tests",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}${pathSeparator}node_modules${pathSeparator}jest${pathSeparator}bin${pathSeparator}jest.js",
+      "args": ["--verbose", "-i", "--no-cache"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Jest watch all tests",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}${pathSeparator}node_modules${pathSeparator}jest${pathSeparator}bin${pathSeparator}jest.js",
+      "args": ["--verbose", "-i", "--no-cache", "--watchAll"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Jest watch current file",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}${pathSeparator}node_modules${pathSeparator}jest${pathSeparator}bin${pathSeparator}jest.js",
+      "args": [
+        "${fileBasename}",
+        "--verbose",
+        "-i",
+        "--no-cache",
+        "--watchAll"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }

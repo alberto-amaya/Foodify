@@ -17,14 +17,17 @@
     "web-vitals": "^1.1.2"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "gh-pages": "^3.2.3"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "serve": "cross-env BROWSER=none react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
