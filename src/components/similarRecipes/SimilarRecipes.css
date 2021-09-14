@@ -1,33 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-:root {
-    --font: 'Poppins', sans-serif;
-}
-
-.main-similar-recipes--header {
+.similar-recipes {
     display: flex;
     justify-content: space-between;
 }
 
-.main-similar-recipes--header h1 {
+.similar-recipes .similiar-recipes--h1 {
     font-family: var(--font);
-    color: #282828;
+    color: var(--fontColor-Primary);
     font-size: 21px;
 }
 
-.main-similar-recipes--header .link {
+.similar-recipes .similiar-recipes--link {
     display: flex;
     text-decoration: none;
 }
 
-.main-similar-recipes--header .link p {
+.similar-recipes .similiar-recipes--link .similiar-recipes--link-p {
     font-family: var(--font);
-    color: #ffc33c;
+    color: var(--fontColor-Secondary);
     font-size: 17px;
     margin-top: 18px;
     margin-right: -30px;
 }
 
-.main-similar-recipes--header .link .icon {
+.main-similar-recipes--header .main-similiar-recipes--header-link .icon {
     margin-top: -2px;
 }

@@ -21,8 +21,8 @@ const RandomRecipes = () => {
 
     return (
         <Fragment>
-            <h1>Random</h1>
-            <div className="main-trend--trending-foods">
+            <h1 className="Random-Recipe-title">Random</h1>
+            <div className="Random-Recipe--trending-foods">
                 {cards}
             </div>
         </Fragment>

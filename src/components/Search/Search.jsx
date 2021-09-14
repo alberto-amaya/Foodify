@@ -11,10 +11,10 @@ const Search = (props) => {
 
     return (
         <Fragment>
-            <button onClick={handleClick}>
-               <Icon name="search" width="25" height="25" fill="transparent" stroke="#fff"></Icon>
+            <button className="Search-btn" onClick={handleClick}>
+               <Icon className="Search-btn--icon" name="search" width="25" height="25" fill="transparent" stroke="#fff"></Icon>
             </button>
-            <input type="text" placeholder="Search" ref={inputSearch} />
+            <input className="Search-input" type="text" placeholder="Search" ref={inputSearch} />
         </Fragment>
     );
 }

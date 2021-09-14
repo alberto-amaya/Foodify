@@ -18,10 +18,10 @@ const RecipeCard = (props) => {
     }, [isPending, data] );
 
     return (
-        <Link to='/recipe' className="Link">
+        <Link to='/recipe' className="Recipe-Card--Link">
             <article className="Recipe-Card">
                 <div className="Recipe-Card--recipeImage">
-                    <img src={img} alt="recipe" />
+                    <img className="recipeImage" src={img} alt="recipe" />
                 </div>
                 <div className="Recipe-Card--recipeContent">
                     <h2>{props.title.substr(0,50)+'..'}</h2>

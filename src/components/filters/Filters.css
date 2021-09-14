@@ -3,5 +3,9 @@
     justify-content: center;
     align-items: center;
     width: 50px;
+    height: 2.6em;
     border-radius: 10px;
+    background-color: var(--bg-secundary);
+    border: none;
+    outline: none;
 }

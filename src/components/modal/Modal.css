@@ -35,11 +35,14 @@
     right: 0;
     border-radius: 10px;
     background: inherit;
+    border: none;
+    outline: none;
+    background-color: inherit;
 }
 
 .window .window-header h1 {
-    font-family: 'Poppins', sans-serif; 
-    color: #282828;
+    font-family: var(--font); 
+    color: var(--fontColor-Primary);
     font-size: 21px;
     font-weight: 500;
 }

@@ -1,16 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-:root {
-    --font: 'Poppins', sans-serif;
-}
-
-h1 {
+.Random-Recipe-title {
     font-family: var(--font); 
-    color: #282828;
+    color: var(--fontColor-Primary);
     font-size: 21px;
 }
 
-.main-trend--trending-foods {
+.Random-Recipe--trending-foods {
     position: relative;
     display: flex;
     width: 330px;

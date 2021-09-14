@@ -1,10 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-:root {
-    --font: 'Poppins', sans-serif;
-}
-
-.Link {
+.Recipe-Card--Link {
     text-decoration: none;
 }
 
@@ -14,7 +8,7 @@
     margin-bottom: 10px;
 }
 
-.Recipe-Card .Recipe-Card--recipeImage img {
+.Recipe-Card .Recipe-Card--recipeImage .recipeImage {
     width: 90px;
     height: 90px;
     object-fit: cover;
@@ -24,8 +18,8 @@
 
 .Recipe-Card .Recipe-Card--recipeContent h2 {
     font-family: var(--font);
-    color: #282828;
-    font-size: 16px;
+    color: var(--fontColor-Primary);
+    font-size: 1rem;
     margin-top: 7px;
     margin-bottom: 8px;
 }
